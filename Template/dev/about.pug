@@ -1,0 +1,72 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+- var page = 'About' //- Name Page
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body
+        //- HEADER
+        include includes/nav.pug
+
+        //- ABOUT
+        section.about_w
+            .container: .welcome_ab
+                .row.m-0
+                    .img_ab.col-lg-6.p-0
+                        img(src="https://via.placeholder.com/555x470")
+                    .inf_ab.col-lg-6.col-md-12
+                        h2 The Company Story
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat.
+
+        //- INFORMATION
+        section.information_ab: .container
+            .col-lg-12
+                h2 Our Studio Will Help You
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .button: a(href='#') Contacts
+
+        //- TEAM
+        section.team
+            .container
+                .row
+                    .team_t.col-lg-3
+                        h2 Our Team
+                    .team_t.col-lg-9
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                .bg_team.col-lg-12: .row.justify-content-between
+                    mixin team_p(h4, span, img)
+                        .face_team.col-lg-3.col-md-3.p-0
+                                .img_team
+                                    img(src=img alt="")
+                                    .social
+                                        a(href='#'): i.fab.fa-twitter
+                                        a(href='#'): i.fab.fa-youtube
+                                        a(href='#'): i.class.fab.fa-behance
+                                        a(href='#'): i.fab.fa-facebook-f
+                                h4=h4
+                                span=span
+                    +team_p('Emily Lane','Director','https://via.placeholder.com//275x275')
+                    +team_p('Jack Mosley','Designer','https://via.placeholder.com//275x275')
+                    +team_p('Anna Lane','3D Designer','https://via.placeholder.com//275x275')
+                    +team_p('Roy Pitts','Menager','https://via.placeholder.com//275x275')
+
+        //- GALLERY
+        section.gallery: .container: .gallery_block
+            h2 Gallery
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+            .gallery_img: .row
+                mixin image_gallery(imgfull, imgmin)
+                    .ig.col-lg-4.col-md-4.col-12: a(data-fancybox='gallery' href=imgfull): img(src=imgmin)
+                +image_gallery('https://via.placeholder.com/1920x1080','https://via.placeholder.com/1920x1080')
+                +image_gallery('https://via.placeholder.com/1920x1080','https://via.placeholder.com/1920x1080')
+                +image_gallery('https://via.placeholder.com/1920x1080','https://via.placeholder.com/1920x1080')
+
+        //- FOOTER
+        include includes/footer.pug

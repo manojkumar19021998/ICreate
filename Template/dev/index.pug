@@ -1,0 +1,209 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+- var page = 'Home page' //- Name Page
+- var head_title = false
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body
+        include includes/nav.pug
+        //- HEADER
+        header.slider_head
+            include includes/absolute_element.pug
+            .icon: .row.flex-column.align-items-center.justify-content-center.h-100
+                a(href='#'): i.fab.fa-twitter
+                a(href='#'): i.fab.fa-youtube
+                a(href='#'): i.class.fab.fa-behance
+                a(href='#'): i.fab.fa-facebook-f
+            .container: .swiper-container: .swiper-wrapper.head_slider
+                .swiper-slide
+                    .tit_img
+                        img(src="https://via.placeholder.com/500x500")
+                    .title
+                        .box: h1 Hard Work is Sucess
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .button: a(href='#') What we do
+                .swiper-slide
+                    .tit_img
+                        img(src="https://via.placeholder.com/500x500")
+                    .title
+                        .box: h1 Welcome To Website
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .button: a(href='#') What we do
+                .swiper-slide
+                    .tit_img
+                        img(src="https://via.placeholder.com/500x500")
+                    .title
+                        .box: h1 Hard Work is Sucess
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .button: a(href='#') What we do
+            .swiper-pagination
+
+        //- SERVICES
+        section.services
+            .container: .row
+                mixin serv_p(h3, p, dur, img)
+                    .col-lg-4(data-aos="fade-up", data-aos-duration=dur)
+                        .numb
+                            span: img(src=img)
+                            h3= h3
+                            p= p
+                +serv_p('Bright project','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore','0','assets/img/icons/icon_01.svg')
+                +serv_p('Project discussion','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore','1000','assets/img/icons/icon_02.svg')
+                +serv_p('Signing a contract','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore','2000','assets/img/icons/icon_03.svg')
+
+        //- WELCOME
+        section.welcome_b
+            .welcome.row
+                .img_b.col-lg-6.p-0
+                    img(src="https://via.placeholder.com/1920x1080")
+                .bg.col-lg-6: .cont_inf
+                    h2 Welcome To Website
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing.
+                    .button: a(href='#') What we do
+
+        //- PRODUCTS
+        section.products
+            span.element_ten: img(src="assets/img/icons/cub_ten.svg", alt="")
+            span.element_eleven: img(src="assets/img/icons/cub_eleven.svg", alt="")
+            span.element_twelve: img(src="assets/img/icons/cub_twelve.svg", alt="")
+            .container: .row
+                .title_b.col-sm-12.col-12
+                    h2 What We Do
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .row
+                    mixin prod_p(h3, p, span, dur, img)
+                        .pr.col-lg-4.col-md-8.col-12(data-aos="fade-up", data-aos-duration=dur): .product_bl
+                            img(src=img alt="")
+                            .product_cont
+                                h3=h3
+                                p=p
+                                span
+                                    =span
+                                    sup: small $
+                                    i / mo
+                                .button: a(href='#') Start
+                    +prod_p('Social Media Ads','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed','999','0','https://via.placeholder.com//360x250')
+                    +prod_p('Photo Production','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed','100','1000','https://via.placeholder.com//360x250')
+                    +prod_p('Seo Marketing','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed','800','2000','https://via.placeholder.com//360x250')
+
+        //- WORK
+        section.work
+            .container
+                .title_b.col-lg-12.col-md-12.p-0
+                    h2 Latest Work
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .wrk
+                    .img_wr: img(src="https://via.placeholder.com/500x500")
+                    .name_wr
+                        h3 Best Project
+                        span Completed In 3D Max
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et
+                        .icon.i_two.col-lg-4.col-md-12
+                            .row.align-items-center
+                                a(href='#'): i.fab.fa-facebook-f
+                                a(href='#'): i.fab.fa-twitter
+                                a(href='#'): i.fab.fa-youtube
+                                a(href='#'): i.class.fab.fa-behance
+                .img_w: .row
+                    mixin image_work(imgfull, imgmin)
+                        .img_portf
+                            a(data-fancybox='gallery' href=imgfull)
+                                .hover_info: i.fas.fa-search
+                                img(src=imgmin)
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com/260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+
+        //- PROCESS
+        section.process
+            .container
+                .title_b
+                    h2 Work Process
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .row.process_c
+                    .process_b.sq_on.col-lg-4.col-md-4.col-12
+                        span.square_one 1
+                        .b_brc(data-aos="fade-up", data-aos-duration="0")
+                            h4 Order
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                    .process_b.sq_tw.col-lg-4.col-md-4.col-12
+                        span.square_two 2
+                        .b_brc(data-aos="fade-up", data-aos-duration="1000")
+                            h4 Creative Brief
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    .process_b.pr_b.sq_th.col-lg-4.col-md-4.col-12
+                        span.square_three 3
+                        .b_brc(data-aos="fade-up", data-aos-duration="2000")
+                            h4 Production
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    .process_b.sq_fo.col-lg-4.col-md-4.col-12
+                        span.square_four 4
+                        .b_brc(data-aos="fade-up", data-aos-duration="0")
+                            h4 Feedback
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    .process_b.sq_fv.col-lg-4.col-md-4.col-12
+                        span.square_five 5
+                        .b_brc(data-aos="fade-up", data-aos-duration="1000")
+                            h4 Delivery
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    .process_b.sq_s.col-lg-4.col-md-4.col-12
+                        span.square_six 6
+                        .b_brc(data-aos="fade-up", data-aos-duration="2000")
+                            h4 Happy Client
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+
+        //- TEAM
+        section.team
+            .container
+                .row
+                    .team_t.col-lg-3
+                        h2 Our Team
+                    .team_t.col-lg-9
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                .bg_team.col-lg-12: .row.justify-content-between
+                    mixin team_p(h4, span, img)
+                        .face_team.col-lg-3.col-md-3.p-0
+                                .img_team
+                                    img(src=img alt="")
+                                    .social
+                                        a(href='#'): i.fab.fa-twitter
+                                        a(href='#'): i.fab.fa-youtube
+                                        a(href='#'): i.class.fab.fa-behance
+                                        a(href='#'): i.fab.fa-facebook-f
+                                h4=h4
+                                span=span
+                    +team_p('Emily Lane','Director','https://via.placeholder.com//275x275')
+                    +team_p('Jack Mosley','Designer','https://via.placeholder.com//275x275')
+                    +team_p('Anna Lane','3D Designer','https://via.placeholder.com//275x275')
+                    +team_p('Roy Pitts','Menager','https://via.placeholder.com//275x275')
+
+        //- BLOG
+        section.blog
+            .container
+                .title_b
+                    h2 Blog
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .posts_s.three_cols.col-lg-12: .row
+                    include includes/post.pug
+                    +post('Best office in town',
+                    'Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.',
+                    'https://via.placeholder.com/1020x1080')
+                    +post('Why design is needed',
+                    'Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.',
+                    'https://via.placeholder.com/1020x1080')
+                    +post('Business Courses',
+                    'Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.',
+                    'https://via.placeholder.com/1020x1080')
+
+        //- FOOTER
+        include includes/footer.pug

@@ -1,0 +1,96 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+block var
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body
+
+        //- HEADER
+        include includes/nav.pug
+
+        //- MEDIA_ELEMENTS
+        .media_element
+            .container
+                .col-lg-12.p-0
+                    block media_element
+
+        //- WRAPPER
+        section.wrapper
+            .container
+                    .row
+                        .content_post.col-lg-9.col-12
+                            p The most shared article of the year is found on Simplemost.com. The news here is the new construction-themed amusement park found in Diggerland, a theme park based in the US and the UK. Diggerland gives kids the chance to be like “Bob the Builder” and “Handy Manny” by putting them in the driver’s seat. Here kids can operate heavy machinery, all on their own – and it’s safe for kids according to the theme park.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Nisl nunc mi ipsum faucibus vitae. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Eget mi proin sed libero enim. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Ut eu sem integer vitae justo eget magna fermentum. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Enim facilisis gravida neque convallis. Nibh tortor id aliquet lectus proin nibh nisl condimentum id.
+                            .quotes_p
+                                p The most shared article of the year is found on Simplemost.com. The news here is the new construction-themed amusement park found in Diggerland, a theme park based in the US and the UK. Diggerland gives.
+                            p The most shared article of the year is found on Simplemost.com. The news here is the new construction-themed amusement park found in Diggerland, a theme park based in the US and the UK. Diggerland gives kids the chance to be like “Bob the Builder” and “Handy Manny” by putting them in the driver’s seat. Here kids can operate heavy machinery, all on their own – and it’s safe.
+                            h2 House with a terrace
+                            p The most shared article of the year is found on Simplemost.com. The news here is the new construction-themed amusement park found in Diggerland, a theme park based in the US and the UK. Diggerland gives kids the chance to be like “Bob the Builder” and “Handy Manny” by putting them in the driver’s seat. Here kids can operate heavy machinery, all on their own – and it’s safe for kids according to the theme park. The most shared article of the year is found on Simplemost.com. The news here is the new construction-themed amusement park found in Diggerland, a theme park based in the US and the UK. Diggerland gives kids the chance to be like “Bob the Builder” and “Handy Manny” by putting them in the driver’s seat. Here kids can operate heavy machinery, all on their own – and it’s safe.
+                            .row
+                                .col-lg-6.col-12.p-0
+                                    .img_blog: img(src="https://via.placeholder.com/385x300")
+                                .col-lg-6.col-12.p-0
+                                    .img_blog: img(src="https://via.placeholder.com/385x300")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus.
+                            h2 Why do you need a design
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Nisl nunc mi ipsum faucibus vitae. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Eget mi proin sed libero enim. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Ut eu sem integer vitae justo eget magna fermentum. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Enim facilisis gravida neque convallis. Nibh tortor id aliquet lectus proin nibh nisl condimentum id.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus.
+                        include includes/sidebar.pug
+                        +s_post_sidebar
+        //- BLOG
+        section.blog
+            .container
+                .posts_s.three_cols.col-lg-12: .row
+                    include includes/post.pug
+                    +post('Why design is needed',
+                    'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                    'https://via.placeholder.com/1020x1080')
+                    +post('Success in front of you',
+                    'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                    '')(class="video")
+                    +post('Business Courses',
+                    'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                    'https://via.placeholder.com/1020x1080')
+
+        //- COMMENTS
+        section.comments
+            .container
+                .wrapper_min
+                .comment
+                    h2 Comments
+                    .ava_img
+                        .avatar: img(src="https://via.placeholder.com/120x120")
+                        .info_comm
+                            h3 Anna Hardy
+                            span June 25, 2019
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            .ava_img.answer
+                                .avatar: img(src="https://via.placeholder.com/120x120")
+                                .info_comm
+                                    h3 John Doe
+                                    span June 25, 2019
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                .form_comment
+                    h2 Comments
+                    p  Your email address will not be published. Required fields are marked *
+                    form
+                        .rpl_b
+                            input(placeholder="Name")
+                            input(placeholder="Email")
+                        textarea(placeholder="Comment")
+                        p
+                            input(type="checkbox" value="yes")
+                            label Save my name, email, and website in this browser for the next time I comment.
+                        .button: a(href='#') Send Message
+
+        //- FOOTER
+        include includes/footer.pug
+

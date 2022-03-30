@@ -1,0 +1,83 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+.top_nav: .container
+    .left_nav
+        span
+            i.far.fa-question-circle
+            | FAG
+        span
+            i.fas.fa-map-marker-alt
+            | 184 Main Collins Street
+    .right_nav
+        span
+            i.fas.fa-paper-plane
+            | brunn@select-themes.com
+        span
+            i.fas.fa-mobile-alt
+            | 444 77 0000
+.container: .menu.d-flex.justify-content-between.align-items-center
+    a.logo(href="index.html")
+        img(src="assets/img/icons/logo_vio.svg")
+        | Violy
+    .menu__icon
+        span
+        span
+        span
+        span
+    .navbar-nav
+        ul
+            li.active: a(href="index.html") Home
+            li.down_nav
+                a(href="portfolio.html") Portfolio
+                .dropdown-menu.small_menu
+                    ul
+                        li: a(href="posts.html") One Column
+                        li: a(href="two_cols.html") Two Column
+                        li: a(href="three_cols.html") Three Column
+                        li: a(href="posts.html") Posts
+            li.down_nav
+                a(href="#") Blog
+                .dropdown-menu.w_dropdown
+                    .mega_m
+                        h3 Blog
+                        ul
+                            li: a(href="posts.html") One Column
+                            li: a(href="two_cols.html") Two Column
+                            li: a(href="three_cols.html") Three Colum
+                            li: a(href="three_cols.html") Four Colum
+                    .mega_m
+                        h3 Standart
+                        ul
+                            li: a(href="posts.html") Posts
+                            li: a(href="right_sidebar_blog.html") Right Sidebar Post
+                            li: a(href="left_sidebar_blog.html") Left Sidebar Post
+                            li: a(href="three_cols.html") Three Colum
+                    .mega_m
+                        h3 Post Types
+                        ul
+                            li: a(href="single_post_image.html") Single Post Image
+                            li: a(href="single_post_video.html") Single Post Video
+                            li: a(href="single_post_quote.html") Single Post Quote
+                    .mega_m.widget_mega
+                        h3 Widget
+                        .widget_m
+                            img(src="https://via.placeholder.com/500x500")
+            li: a(href="about.html") About Us
+            li: a(href="contacts.html") Contacts
+            li: a(href="faq.html") FAQ
+            .button.small.line: a(href='#') Call Us
+if head_title === false
+else
+    header.head_page
+        span.element_two: img(src="assets/img/cub_two.png", alt="")
+        span.element_three: img(src="assets/img/cub_three.png", alt="")
+        span.element_thirteen: img(src="assets/img/icons/cub_thirteen.svg", alt="")
+        .container.title_h: .block_title
+            h1= page
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam ipsam <br> repudiandae nobis. Reprehenderit, inventore rem.

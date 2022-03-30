@@ -1,0 +1,40 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+mixin post(h2, p, img)
+    .posts_standart(class!=attributes.class)
+        if attributes.class === "quotes"
+        else if attributes.class === "link"
+        else if attributes.class === "video"
+            .video_p: iframe(width="100%" height="100%" src="https://www.youtube.com/embed/3wi65UW_nJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        else
+            a(href="single_post_image.html"): .post_img: img(src=img)
+        .wrp_post
+            .category
+                span Blog
+                span Construction
+                span Painting
+            if attributes.class === "quotes"
+                a(href="single_post_quote.html")
+                    h3=h2
+            else if attributes.class === "link"
+                a(href="single_post_link.html")
+                    h2=h2
+            else if attributes.class === "video"
+                a(href="single_post_video.html")
+                    h2=h2
+                p=p
+            else
+                a(href="single_post_image.html")
+                    h2=h2
+                p=p
+            .bottom_inf
+                .left_inf
+                    span John Doe
+                .right_inf
+                    span 14.07.2019

@@ -1,0 +1,51 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+- var page = 'Portfolio' //- Name Page
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body#portfolio
+        //- HEADER
+        include includes/nav.pug
+
+        //- WORK
+        section.work
+            .container
+                .wrk
+                    .img_wr: img(src="https://via.placeholder.com/500x500")
+                    .name_wr
+                        h3 Best Project
+                        span Completed In 3D Max
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing. Iaculis at erat pellentesque adipiscing commodo elit at. Et
+                        .icon.i_two.col-lg-4.col-md-12
+                            .row.align-items-center
+                                a(href='#'): i.fab.fa-facebook-f
+                                a(href='#'): i.fab.fa-twitter
+                                a(href='#'): i.fab.fa-youtube
+                                a(href='#'): i.class.fab.fa-behance
+                .img_w: .row
+                    mixin image_work(imgfull, imgmin)
+                        .img_portf
+                            a(data-fancybox='gallery' href=imgfull)
+                                .hover_info: i.fas.fa-search
+                                img(src=imgmin)
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com/260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com/260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+                    +image_work('https://via.placeholder.com/1920x1080','https://via.placeholder.com//260x260')
+
+        //- FOOTER
+        include includes/footer.pug

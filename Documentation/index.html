@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="robots" content="index, follow, noodp">
+	<meta name="googlebot" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Favicons for all devices -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/i/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="assets/i/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/i/favicons/favicon-16x16.png" sizes="16x16">
+	<meta name="theme-color" content="#eb9412">
+
+	<title>Documentation</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1>Violy Documentation</h1>
+		<p>Thank You for purchasing this template, I hope You enjoy it!</p>
+
+		<div class="example">
+			<h2>1. Template Structure</h2>
+			<ul class="list">
+				<li class="list__item">- You can find all files in <span class="snippet">template</span> folder</li>
+				<li class="list__item">- In <span class="snippet">template</span> folder you will see <span class="snippet">build</span> and <span class="snippet">dev</span> folders</li>
+				<li class="list__item">- <span class="snippet">build</span> folder contain all compiled and ready to use files</li>
+				<li class="list__item">- <span class="snippet">dev</span> folder contain all sources for your work</li>
+				<li class="list__item">- CSS, js, images, fonts files you can find in <span class="snippet">assets</span> folder</li>
+				<li class="list__item">- CSS files you can find in <span class="snippet">build/assets/css</span> folder or <span class="snippet">dev/assets/sass</span> folder with sources</li>
+				<li class="list__item">- JS files you can find in <span class="snippet">build/assets/js</span> folder or <span class="snippet">dev/assets/js</span> folder with sources</li>
+				<li class="list__item">- Fonts you can find in <span class="snippet">assets/webfonts</span> folder</li>
+			</ul>
+		</div>
+
+		<div class="example">
+			<h2>2. How to edit template (for users)</h2>
+			<p>Better way to use sources in <span class="snippet">dev</span> folder, but if you don't know all technologies you can simply edit <span class="snippet">build</span> files</p>
+			<ul class="list">
+				<li class="list__item">- <b>Change intro background image</b>. Upload your image to <span class="snippet">assets/img/</span> folder. Open <span class="snippet">index.html</span> file and find <span class="snippet">style="background-image: url('http://placehold.it/1980x700/333');"</span> or <span class="snippet">img</span> tag. Change url value to your image path. F.e. <span class="snippet">url("../img/image.jpg")</span></li>
+				<li class="list__item">- <b>Change other images</b>. Upload your image to <span class="snippet">assets/img/</span> folder. Open any <span class="snippet">style.css</span> file and find <span class="snippet">url('http://placehold.it/1980x700/333')</span>. Change the url to your image path.</li>
+				<li class="list__item">- All texts you can change in <span class="snippet">.html</span> files</li>
+			</ul>
+		</div>
+
+		<div class="example">
+			<h2>3. How to edit template (for developers)</h2>
+			<p>If you want to edit some html, css, js files, best way to use sources in <span class="snippet">dev</span> folder. You need <span class="snippet">node.js</span>, <span class="snippet">gulp</span> installed</p>
+			<ul class="list">
+				<li class="list__item">1. Open <span class="snippet">cmd</span> and go to the projects folder</li>
+				<li class="list__item">2. Run <span class="snippet">npm i</span> to install all gulp dependencies</li>
+				<li class="list__item">4. Run <span class="snippet">gulp</span> to clean build folder, build the new project, run local server and start watching changes</li>
+				<li class="list__item">4.2 Run <span class="snippet">gulp build</span> to build project</li>
+				<li class="list__item">4.3 Run <span class="snippet">gulp watch</span> to watch changes</li>
+				<li class="list__item">4.4 Run <span class="snippet">gulp build</span> to build only html files</li>
+				<li class="list__item">4.5 Run <span class="snippet">gulp sass</span> to build only css files</li>
+				<li class="list__item">4.6 Run <span class="snippet">gulp fonts</span> to build only fonts</li>
+				<li class="list__item">4.7 Run <span class="snippet">gulp img</span> to build only images</li>
+				<li class="list__item">4.8 Run <span class="snippet">gulp clean</span> to delete build folder</li>
+			</ul>
+			<p><b>How to work with html</b></p>
+			<ul class="list">
+				<li class="list__item">- To change html find <span class="snippet">dev</span> folder which includes all <span class="snippet">.pug</span> files.</li>
+				<li class="list__item">- You can see <span class="snippet">templates</span> folder which includes some blocks which are used in whole template (f.e. head, end)</li>
+				<li class="list__item">- This blocks are included in all pages with <span class="snippet">//= includes/head.pug</span> construction</li>
+			</ul>
+
+			<p><b>How to change css</b></p>
+			<ul class="list">
+				<li class="list__item">- To change css open <span class="snippet">dev/assets/sass</span> folder</li>
+				<li class="list__item">- <span class="snippet">main.scss</span> - main file which import all blocks</li>
+				<li class="list__item">- All files you can find in <span class="snippet">includes</span> folder</li>
+			</ul>
+
+			<p><b>How to change js</b></p>
+			<ul class="list">
+				<li class="list__item">- To change js open <span class="snippet">dev/assets/js</span> folder</li>
+			</ul>
+		</div>
+
+		<div class="example">
+			<h2>4. Credits</h2>
+			<ul class="list">
+				<li class="list__item"><span class="snippet snippet--red">important</span> Template not include images which
+					you see in demo!</li>
+				<li class="list__item">Bootstrap <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a></li>
+				<li class="list__item">swiper <a href="https://swiperjs.com/" target="_blank">https://swiperjs.com/</a></li>
+				<li class="list__item">aos js <a href="https://michalsnik.github.io/aos/" target="_blank">https://michalsnik.github.io/aos/</a></li>
+				<li class="list__item">scrollmagic <a href="https://scrollmagic.io/" target="_blank">https://scrollmagic.io/</a></li>
+				<li class="list__item">JQuery <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
+				<li class="list__item">Fancybox <a href="http://fancyapps.com/fancybox/3/"
+						target="_blank">http://fancyapps.com/fancybox/3/</a></li>
+				<li class="list__item">Google Fonts <a href="https://fonts.google.com/"
+						target="_blank">https://fonts.google.com/</a></li>
+				<li class="list__item">FontAwesome <a href="http://fontawesome.io/"
+						target="_blank">http://fontawesome.io/</a></li>
+				<li class="list__item">SVG icons <a href="http://www.flaticon.com/"
+						target="_blank">http://www.flaticon.com/</a></li>
+				<li class="list__item">Images <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a> and
+					<a href="https://www.shutterstock.com/" target="_blank">https://www.shutterstock.com/</a></li>
+			</ul>
+		</div>
+
+	</div>
+<style>
+body {
+	background: #161A23;
+	color: #fff;
+}
+p,li {
+	color: #fff;
+}
+.snippet {
+	background: rgba(255, 255, 255, .15);
+	color: #fff;
+}
+.example {
+	background: rgb(30, 35, 48);
+	border: 0px ;
+	border-radius: 0px;
+	padding: 30px;
+}
+</style>
+</body>
+
+</html>

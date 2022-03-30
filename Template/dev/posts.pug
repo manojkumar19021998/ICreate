@@ -1,0 +1,38 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+- var page = 'Blog' //- Name Page
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body
+        //- HEADER
+        include includes/nav.pug
+
+        //- POSTS
+        .post_content.container
+            .posts_s.col-lg-12.p-0
+                include includes/post.pug
+                +post('Why design is needed',
+                'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                'https://via.placeholder.com/1920x1080')
+                +post('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing.','',
+                '')(class="quotes")
+                +post('Success in front of you',
+                'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                '')(class="video")
+                +post('Business Courses',
+                'A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams. A large selection of houses in the south of Ukraine, call, always happy to help with the choice of your dreams',
+                'https://via.placeholder.com/1920x1080')
+                .nav_pages
+                    span.active 1
+                    span 2
+                    span 3
+        //- FOOTER
+        include includes/footer.pug

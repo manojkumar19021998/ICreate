@@ -1,0 +1,56 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+- var page = 'Contact' //- Name Page
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+    body
+        //- HEADER
+        include includes/nav.pug
+
+        //- INFORMATION
+        section.information
+            .container: .row.justify-content-between.col-lg-12.p-0.m-0
+                    .col-lg-5.col-12.p-0: .con
+                        .info_c.d-flex
+                            span: i.fas.fa-map-marker-alt
+                            p 8 Delaware Lane <br> Greensboro, NC 27405
+                        .info_c.d-flex
+                            span: i.fas.fa-phone-alt
+                            p +380634781377 <br> +380990137781
+                        .info_c.d-flex
+                            span: i.fas.fa-envelope
+                            p Studio@mail.com <br> Astroon.team@gmail.com
+                    .img_information.col-lg-7.col-12.p-0
+                        img(src="https://via.placeholder.com/648x455")
+
+        //- FORM
+        section.form_b
+            .container
+                .form_contact
+                    h2 Contact
+                    p  Your email address will not be published. Required fields are marked *
+                    form
+                        .rpl_b
+                            input(placeholder="Name")
+                            input(placeholder="Email")
+                        textarea(placeholder="Comment")
+                        p
+                            input(type="checkbox" value="yes")
+                            label Save my name, email, and website in this browser for the next time I comment.
+                        .button: a(href='#') Send Message
+
+        //- MAP
+        section.map
+            .col-lg-12.p-0
+                iframe(src="https://www.google.com/maps/embed?pb=!1m12!1m10!1m3!1d174066.96780511574!2d32.059409951671284!3d46.9883057226557!2m1!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1565129653470!5m2!1sru!2sua" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen)
+
+        //- FOOTER
+        include includes/footer.pug

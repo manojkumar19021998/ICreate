@@ -1,0 +1,101 @@
+//------------------------------------------------------------------
+    Theme by astroon
+    Versiom: 1.0.0
+    Year: 2019
+    Contact: astroonthemes@gmail.com
+    Thank you for your purchase!
+    ----------------------------------------------------------------
+
+mixin sidebar
+    .wrap_sidebar.col-lg-3
+        .sidebar.p-0
+            .latest_posts_widget.widget
+                .flex.title_widget
+                    span: i.fas.fa-th-list
+                    h4 Latest Posts
+                .lts_post
+                    .min_img_w: img(src="https://via.placeholder.com/100x100")
+                    .info_m_post
+                        h5 How to pass an interwiev
+                        span June 25, 2019
+                .lts_post
+                    .min_img_w: img(src="https://via.placeholder.com/100x100")
+                    .info_m_post
+                        h5 Why do you need a design
+                        span June 25, 2019
+            .search_widget.widget
+                input(placeholder="Seacrh")
+            .category_widget.widget
+                .flex.title_widget
+                    span: i.fas.fa-folder-open
+                    h4 Category
+                li: a Studio
+                    i 2
+                li: a Web development
+                    i 5
+                li: a Business
+                    i 10
+                li: a Layout lessons
+                    i 3
+                li: a Photo processing
+                    i 8
+            .tags_widget.widget
+                .flex.title_widget
+                    span: i.fas.fa-tag
+                    h4 Tags
+                span Studio
+                span Marketing
+                span Design
+                span Development
+mixin s_post_sidebar
+    .wrap_sidebar.col-lg-3.col-12
+        .sidebar.p-0
+            .author_widget.widget
+                .avatar: img(src="https://via.placeholder.com/255x210")
+                h3 John Doe
+                span Designer
+                p Lorem ipsum dolor sit amet, consectetur.
+            .search_widget.widget
+                input(placeholder="Seacrh")
+            .latest_posts_widget.latest.widget
+                .flex.title_widget
+                    span: i.fas.fa-th-list
+                    h4 Latest Posts
+                .lts_post
+                    .min_img_w: img(src="https://via.placeholder.com/100x100")
+                    .info_m_post
+                        h5 How to pass an interwiev
+                        span June 25, 2019
+                .lts_post
+                    .min_img_w: img(src="https://via.placeholder.com/100x100")
+                    .info_m_post
+                        h5 Why do you need a design
+                        span June 25, 2019
+            .category_widget.widget
+                .flex.title_widget
+                    span: i.fas.fa-folder-open
+                    h4 Category
+                li: a Studio
+                    i 2
+                li: a Web development
+                    i 5
+                li: a Business
+                    i 10
+                li: a Layout lessons
+                    i 3
+                li: a Photo processing
+                    i 8
+            .tags_widget.widget
+                .flex.title_widget
+                    span: i.fas.fa-tag
+                    h4 Tags
+                span Studio
+                span Marketing
+                span Design
+                span Development
+            .icon_widget.icon_s.icon
+                .row.align-items-center.justify-content-center
+                    a(href='#'): i.fab.fa-twitter
+                    a(href='#'): i.fab.fa-youtube
+                    a(href='#'): i.class.fab.fa-behance
+                    a(href='#'): i.fab.fa-facebook-f
